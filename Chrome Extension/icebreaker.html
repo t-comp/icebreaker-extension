@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Goblin+One&family=Yeseva+One&display=swap" rel="stylesheet"> 
+  <title>Breaking the Ice!</title>
+  <style>
+    body {
+        font-family: "Yeseva One", serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 20px;
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+
+    .icebreaker-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .initial-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        height: 100%; /* full height to center the button */
+    }
+
+    #icebreaker {
+        display: none;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .button-container {
+        display: none; /* Ensure the container is hidden initially */
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .center-button {
+        padding: 10px 15px;
+        height: 60px;
+        width: 185px;
+        background-color: #89c5d9;
+        color: rgb(64, 59, 55);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .small-button {
+        padding: 5px 10px;
+        height: 40px;
+        width: 125px;
+        background-color: #89c5d9;
+        color: rgb(64, 59, 55);
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .circle-button {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        padding: 0;
+        position: fixed; /* Change to fixed to move it into the corner */
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .center-button:hover, .small-button:hover, .circle-button:hover {
+        background-color: #6a869f;
+    }
+  </style>
+</head>
+<body>
+  <h1>Icebreaker Extensions</h1>
+  <div class="icebreaker-container initial-state">
+    <span id="icebreaker" class="hidden">Click the button to get an icebreaker</span>
+    <button id="new-icebreaker" class="center-button">New Icebreaker</button>
+    <div id="categories" class="button-container" style="display:none;">
+      <button id="questions" class="small-button">Questions</button>
+      <button id="small-group-activities" class="small-button">Small Group Activities</button>
+      <button id="misc" class="small-button">Misc.</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
